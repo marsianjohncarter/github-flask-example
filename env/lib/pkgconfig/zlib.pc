@@ -1,0 +1,13 @@
+prefix=/home/john/Desktop/github-flask-example/env
+exec_prefix=/home/john/Desktop/github-flask-example/env
+libdir=/home/john/Desktop/github-flask-example/env/lib
+sharedlibdir=/home/john/Desktop/github-flask-example/env/lib
+includedir=/home/john/Desktop/github-flask-example/env/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
