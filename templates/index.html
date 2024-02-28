@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Job Examples{% endblock %}
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    .important {
+        color: #202f3ecf;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="">
+    <h1>Welcome to Index.html</h1>
+    <p class="important">
+        My awesome homepage.
+    </p>
+</div>
+
+<div class="card text-bg-dark">
+    <img src="{{ url_for('static', filename='images/wp7795842-desktop-4k-minimal-wallpapers.png') }}" class="card-img" alt="..." height="540px" >
+    <div class="card-img-overlay">
+      <h5 class="card-title">This website is styled with Bootstrap</h5>
+      <p class="card-text">I use this awsome library to create beutiful websites. Index.html is created from the Jinja template "base.html".</p>
+      <p class="card-text"><small>The date today is {{ date }}</small></p>
+    </div>
+  </div>
+
+{% endblock %} 

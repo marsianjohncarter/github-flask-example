@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+    <div data-bs-theme="dark" id="root" class="container text-center position-absolute top-50 start-50 translate-middle p-3 bg-opacity-10 border border-dark-subtle rounded shadow-lg p-3 mb-5" data-bs-theme="light">
+        <ul class="nav nav-pills nav-justified mb-5">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+    <footer>
+        {% block footer %}
+        &copy; Copyright 2008 by <a href="http://domain.invalid/">you</a>.
+        {% endblock %}
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.js') }}"></script>
+</body>
+</html>
