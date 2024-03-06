@@ -3,7 +3,10 @@
 window.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav-link');
 
-    
+    function printHello() {
+    }
+    console.log(navLinks);
+
     function removeElmentAttributeAndClass(attr, element) {
         element.removeAttribute(attr);
         element.classList.remove('active');

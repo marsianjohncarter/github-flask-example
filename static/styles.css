@@ -3,3 +3,7 @@
     margin-bottom: 500px;
 
 } */
+
+body, html {
+    height: 100%;
+}
